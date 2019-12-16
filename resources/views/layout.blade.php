@@ -91,6 +91,9 @@
                     <a href="/about">about</a>  
                 </div>
                 <div class="links">
+                    <a href="/projects">Projects</a>  
+                </div>
+                <div class="links">
                     <a href="/">Home</a>  
                 </div>
             </div>
