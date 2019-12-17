@@ -18,27 +18,53 @@ Route::get('/about', 'PagesController@about');
 // operations on the project route 
 
 
-// show all entries
-Route::get('/projects','projectsController@index');
+/*
 
-// fetch to creat new project 
-Route::get('/projects/create','projectsController@create');
+    GET /projects (index)
+    GET /projects/create (create)
+    GET /projects/1 (show)
+    POST /projects (store)
+    GET /projects (edit)
+    {PUT, PATCH} => kind of the same but we stick often with PATCH /projects/1 (update)
+    DELETE /projects/1 (destroy)
 
-// show one entrie 
-Route::get('/projects/{project}','projectsController@show');
 
-// creat a new entrie
-Route::post('/projects','projectsController@store');
+    I can preview all these routes from the terminal by typing : 
+    php artisan route:list
 
-// edit the project 
+*/
 
-Route::get('/projects/{project}/edit','projectsController@edit');
 
-// update the specified project 
+// // show all entries
+// Route::get('/projects','projectsController@index');
 
-Route::patch('/projects/{project}','projectsController@update');
+// // fetch to creat new project 
+// Route::get('/projects/create','projectsController@create');
 
-//delete the request
+// // show one project  
+// Route::get('/projects/{project}','projectsController@show');
 
-Route::delete('/projects/{project}','projectsController@destroy');
+// // creat a new entrie
+// Route::post('/projects','projectsController@store');
 
+// // edit the project 
+
+// Route::get('/projects/{project}/edit','projectsController@edit');
+
+// // update the specified project 
+
+// Route::patch('/projects/{project}','projectsController@update');
+
+// //delete the request
+
+// Route::delete('/projects/{project}','projectsController@destroy');
+
+
+/*
+    the shortcut for the above ☝routes is : 
+
+
+*/
+
+
+Route::resource('projects','projectsController');
