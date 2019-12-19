@@ -1,29 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Projects</title>
-</head>
-<body>
+
+@extends('projects.layout')
+
+
+@section('content')
+
 <h1>Create new project</h1>
 
 <form method="POST" action="/projects">
 
     {{csrf_field()}}
-    <div>
-        <input type="text" name="title" placeholder="Project Title">
-    </div>
-    <div>
-    <textarea name="description" placeholder="Project description"></textarea>
-    </div>
-    <div>
-    <button type="submit">Create Project</button>
-    </div >
+
+<div class="field">
+  <label class="label">title</label>
+  <div class="control">
+    <input class="input"type="text" name="title" placeholder="Project Title">
+  </div>
+</div>
+
+
+<div class="field">
+  <label class="label">description</label>
+  <div class="control">
+    <textarea class="textarea" name="description" placeholder="Project description"></textarea>
+  </div>
+</div>
+
+  <div class="control">
+    <button class="button is-link">Create Project</button>
+  </div>
 
 </form>
 
+@endsection
 
-</body>
-</html>
+
