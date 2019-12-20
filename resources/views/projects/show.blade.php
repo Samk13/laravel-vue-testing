@@ -29,7 +29,7 @@
         @csrf
 
          <div class="buttons">
-                <button  class="button is-link" type="submit" placeholder="description">
+                <button  class="button is-danger" type="submit" placeholder="description">
                         Delete project
                     </button>  
                 </div>   
